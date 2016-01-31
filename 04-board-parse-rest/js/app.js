@@ -19,7 +19,7 @@ $(document).ready(function(){
 				'X-Parse-REST-API-Key': parseRestKey
 			},
 			contentType: 'application/json',
-			dataType: 'json',
+			//dataType: 'json',
 			processData: false,
 			data: JSON.stringify({
 				'username': username,
@@ -41,7 +41,8 @@ $(document).ready(function(){
 })
 function getMessages() {
 	$.ajax({
-		url: ' https://api.parse.com/1/classes/MessageBoard?limit=1000',
+        url: ' https://api.parse.com/1/classes/MessageBoard?limit=1000',
+		//url: ' https://api.parse.com/1/classes/MessageBoard?limit=10',
 		headers: {
 			'X-Parse-Application-Id': parseAppID,
 			'X-Parse-REST-API-Key': parseRestKey
